@@ -1,0 +1,22 @@
+#root {
+  min-height: 100vh;
+}
+
+.hero-paper-grid {
+  background-image: linear-gradient(rgba(24, 27, 31, 0.045) 1px, transparent 1px), linear-gradient(90deg, rgba(24, 27, 31, 0.045) 1px, transparent 1px);
+  background-size: 44px 44px;
+}
+
+.editorial-rule {
+  position: relative;
+}
+
+.editorial-rule::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.65rem;
+  width: 2.75rem;
+  height: 2px;
+  background: #f05d4f;
+}

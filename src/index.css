@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display:ital@0;1&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 42 33% 96%;
+    --foreground: 220 17% 14%;
+    --card: 42 33% 96%;
+    --card-foreground: 220 17% 14%;
+    --popover: 42 33% 96%;
+    --popover-foreground: 220 17% 14%;
+    --primary: 220 17% 14%;
+    --primary-foreground: 42 33% 96%;
+    --secondary: 5 84% 63%;
+    --secondary-foreground: 42 33% 96%;
+    --muted: 40 14% 90%;
+    --muted-foreground: 220 10% 40%;
+    --accent: 5 84% 63%;
+    --accent-foreground: 42 33% 96%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 220 17% 14%;
+    --input: 40 14% 90%;
+    --ring: 5 84% 63%;
+    --radius: 0.2rem;
+  }
+
+  * {
+    @apply border-ae-border/30;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-ae-bg-primary text-ae-text-primary font-body antialiased;
+    overflow-x: hidden;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    a, button, input, textarea, select {
+      transition-duration: 150ms !important;
+    }
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+
+  ::selection {
+    background-color: #f05d4f;
+    color: #fffaf0;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #ebe7dc;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #f05d4f;
+    border-radius: 0;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #cf443b;
+  }
+}
+
+@layer components {
+  .gold-gradient {
+    @apply bg-ae-gold text-ae-text-inverse;
+    background-image: none;
+  }
+
+  .gold-gradient-text {
+    background: #f05d4f;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .glass-card {
+    @apply bg-ae-bg-primary border border-ae-border/15 rounded-none;
+  }
+
+  .glass-card-hover {
+    @apply glass-card transition-all duration-300 hover:border-ae-gold hover:-translate-y-1 hover:shadow-card;
+  }
+
+  .section-padding {
+    @apply py-20 md:py-28 px-5 sm:px-8 lg:px-10;
+  }
+
+  .container-luxury {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer utilities {
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+
+  .will-change-transform {
+    will-change: transform;
+  }
+
+  .gpu-accelerate {
+    transform: translateZ(0);
+  }
+}
+
+/* Google Translate cleanup */
+#google_translate_element,
+.goog-te-gadget,
+.goog-te-banner-frame.skiptranslate,
+.goog-te-balloon-frame,
+.goog-te-menu-frame,
+.goog-te-spinner-pos,
+.goog-logo-link,
+.goog-te-spinner,
+.goog-te-combo {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+body {
+  top: 0 !important;
+}
+
+/* Lenis smooth scroll */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
