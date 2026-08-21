@@ -152,6 +152,14 @@ const team = [
     bio: 'Keeps author campaigns organized and moving forward, supporting communication, launch logistics, and the details that turn plans into progress.',
     tags: ['Author Support', 'Launch Coordination', 'Client Success'],
   },
+   {
+    name: 'Leanne Judith',
+    email: 'leannejudithwrites@gmail.com',
+    expertise: 'Book Marketing & Editorial Consultant',
+    rating: '4.9',
+    bio: 'Supports authors with thoughtful marketing strategy, editorial positioning, and audience-focused promotion that helps books stand out in a crowded marketplace.',
+    tags: ['Book Marketing', 'Editorial Strategy', 'Audience Growth'],
+  },
 ]
 
 const getInitials = (name: string) =>
